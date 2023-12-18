@@ -40,11 +40,11 @@ export default function Playground() {
     return (
         <div className="px-4 py-8">
             <Head>
-                <title>react-tailwindcss-datepicker PlayGround</title>
+                <title>react-tailwindcss-datepicker PlayGround ao</title>
             </Head>
             <h1 className="text-center font-semibold text-xl">
                 <pre className="text-gray-600 text-lg bg-gray-200 max-w-max mx-auto px-2 rounded">
-                    react-tailwindcss-datepicker
+                    react-tailwindcss-datepicker ao
                 </pre>
                 <span className="text-gray-700">PlayGround</span>
             </h1>
@@ -59,32 +59,36 @@ export default function Playground() {
                     showShortcuts={showShortcuts}
                     configs={{
                         shortcuts: {
-                            today: "TText",
-                            yesterday: "YText",
                             past: period => `P-${period} Text`,
-                            currentMonth: "CMText",
-                            pastMonth: "PMText",
-                            last3Days: {
-                                text: "Last 3 days",
+                            quartal1: {
+                                text: "1. Quartal",
                                 period: {
-                                    start: new Date(new Date().setDate(new Date().getDate() - 3)),
-                                    end: new Date()
+                                    start: new Date(new Date().getFullYear(), 0, 1),
+                                    end: new Date(new Date().getFullYear(), 2, 31)
                                 }
                             },
-                            thisDay: {
-                                text: "This Day",
+                            quartal2: {
+                                text: "2. Quartal",
                                 period: {
-                                    start: new Date(),
-                                    end: new Date()
+                                    start: new Date(new Date().getFullYear(), 3, 1),
+                                    end: new Date(new Date().getFullYear(), 5, 30)
                                 }
                             },
-                            next8Days: {
-                                text: "Next 8 days",
+                            quartal3: {
+                                text: "3. Quartal",
                                 period: {
-                                    start: new Date(),
-                                    end: new Date(new Date().setDate(new Date().getDate() + 8))
+                                    start: new Date(new Date().getFullYear(), 6, 1),
+                                    end: new Date(new Date().getFullYear(), 8, 30)
                                 }
-                            }
+                            },
+                            quartal4: {
+                                text: "4. Quartal",
+                                period: {
+                                    start: new Date(new Date().getFullYear(), 9, 1),
+                                    end: new Date(new Date().getFullYear(), 11, 31)
+                                }
+                            },
+
                         },
                         footer: {
                             cancel: "CText",
